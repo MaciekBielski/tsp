@@ -1,0 +1,6 @@
+" let &makeprg= "g++\ `pkg-config\ --libs\ --cflags\ gtk+-2.0\ opencv`\ -Wall\ -lm\ -D_GNU_SOURCE\ -g\ -o\ %<\ %" 
+
+nmap <F9> :silent make\|redraw!\|cc<CR>
+nmap <F10> :!./build/main -l"input.csv" -p 12 -a 2 -g 2 -i 150 -x 0.9 -y 0.3 -v 0.05 -w 20<CR>
+
+unlet! s:makeCommand
